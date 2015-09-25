@@ -11,6 +11,7 @@ var expressHandlebars  = require('express-handlebars');
 var routes = require('./routes/index');
 var users = require('./routes/user');
 var search = require('./routes/search');
+var signup = require('./routes/signup');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/search', search);
+app.use('/signup', signup);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
