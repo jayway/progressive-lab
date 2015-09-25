@@ -1,0 +1,33 @@
+<h1>Sign up for another spammy news letter.</h1>
+
+<form action="/signup/result" method="post">
+	<label for="name">Name:</label>
+	<input name="name" />
+
+	<label for="email">Email:</label>
+	<input name="email" />
+
+	<label for="country">Country:</label>
+	<select name="country"
+			onChange="var locWithoutQuery = window.location.href.split('?')[0];
+					  var selectedCountry = this.options[this.selectedIndex].value;
+			          window.location.replace(locWithoutQuery+'?country='+selectedCountry);">
+		<option value="">Select</option>
+		{{#each countries}}
+		<option value="{{this.name}}"
+				{{#if this.selected}}selected{{/if}}>
+					{{this.name}}
+		</option>
+		{{/each}}
+	</select>
+
+	<label for="city">City:</label>
+	<select name="city">
+		<option value="">Select</option>
+		{{#each cities}}
+		<option value="{{this}}">{{this}}</option>
+		{{/each}}
+	</select>
+
+	<button type="submit">Submit</button>
+</form>

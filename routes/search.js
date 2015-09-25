@@ -16,7 +16,6 @@ vCardData.split(/\n(?=BEGIN:VCARD)/g).map(function(vCardPerson, i) {
 	vCard.readData(vCardPerson, function(err, json) {
 		// Error handling, you say? What can possibly go wrong with this?
 		users.push(json);
-		console.log(json);
 	});
 });
 
