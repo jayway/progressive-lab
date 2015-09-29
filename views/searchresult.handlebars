@@ -1,4 +1,4 @@
-  <h1>Search result</h1>
+
 
   <!-- Render each person. The structure looks like this:
 
@@ -9,8 +9,17 @@
     EMAIL: { type: [Object], value: 'albin.theander@jayway.com' },
     N: 'Theander, Albin' }
    -->
-  {{#each people}}
-  	<p>Name: {{this.FN}}</p>
-  {{else}}
-  	No one found.
-  {{/each}}
+
+ <div id="searchresultHeader">
+   <h1>Result</h1>
+     <div id="searchresult">
+   {{#each people}}
+
+         <p>Name: {{this.FN}}</p>
+
+
+   {{else}}
+       No one found.
+   {{/each}}
+ </div>
+ </div>

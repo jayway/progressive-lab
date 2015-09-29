@@ -147,3 +147,24 @@ a {
 .container-4:hover button.icon:hover{
   background: white;
 }
+
+
+#searchresultHeader {
+  width: 40%;
+  height: 60%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  opacity: 0.5;
+  text-align: center;
+}
+
+#searchresult {
+
+  height: 82%;
+  background-color: transparent;
+  overflow: auto;
+}
+
+
