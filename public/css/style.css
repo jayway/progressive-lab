@@ -168,3 +168,54 @@ a {
 }
 
 
+
+#dynamic-form {
+  margin: 0 auto;
+  padding-top: 2%;
+  width: 150px;
+  position:relative;
+  font-family: "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#dynamic-form form {
+  margin: 0 auto;
+}
+
+#dynamic-form label {
+  display: block;
+  float: left;
+}
+
+#dynamic-form input, select{
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  display: block;
+  vertical-align: middle;
+  background: #2b303b;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+#dynamic-form input:focus, select:focus{
+  outline: none;
+}
+
+#dynamic-form button {
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  background: #2b303b;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+#sign-up {
+  text-align: center;
+}
