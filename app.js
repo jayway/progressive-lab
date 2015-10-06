@@ -8,9 +8,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressHandlebars  = require('express-handlebars');
 
-var routes = require('./routes/index');
-var search = require('./routes/search');
-var signup = require('./routes/signup');
+var routes = require('./lib/routes/index');
+var search = require('./lib/routes/search');
+var signup = require('./lib/routes/signup');
+var groups = require('./lib/routes/groups');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/search', search);
 app.use('/signup', signup);
+app.use('/groups', groups);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
