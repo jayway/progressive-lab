@@ -12,6 +12,7 @@ var routes = require('./lib/routes/index');
 var users = require('./lib/routes/users');
 var signup = require('./lib/routes/signup');
 var groups = require('./lib/routes/groups');
+var shopping = require('./lib/routes/shopping');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/signup', signup);
 app.use('/groups', groups);
+app.use('/shopping', shopping);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
