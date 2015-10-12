@@ -7,7 +7,7 @@
  {{/each}}
 </ul>
 
-<form method="POST" action="/groups/{{group.id}}">
+<form method="POST" action="/groups/edit/{{group.id}}">
   <select name="name">
     {{#each users}}
     <option value="{{this}}">{{this}}</option>
@@ -15,3 +15,6 @@
   </select>
   <button type="submit">Add</button>
 </form>
+
+<div>
+<a href="/groups/adduser">Add new user</a>
