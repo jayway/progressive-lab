@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var expressHandlebars  = require('express-handlebars');
 
 var routes = require('./lib/routes/index');
-var search = require('./lib/routes/search');
+var users = require('./lib/routes/users');
 var signup = require('./lib/routes/signup');
 var groups = require('./lib/routes/groups');
 
@@ -38,13 +38,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/search', search);
+app.use('/users', users);
 app.use('/signup', signup);
 app.use('/groups', groups);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+    var err = new Error('Not Found: ' + req.path);
     err.status = 404;
     next(err);
 });
