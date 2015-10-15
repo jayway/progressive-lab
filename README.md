@@ -46,7 +46,7 @@ Be able to click the navigation links (Search, Dynamic form, etc), without reloa
 
 #### Search
 
-Implement [incremental search](https://en.wikipedia.org/wiki/Incremental_search), displaying the search results below the search box as the user types.
+Implement displaying the search results below the search box when the form is submitted.
 
 #### Dynamic form
 
