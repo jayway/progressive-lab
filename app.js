@@ -20,11 +20,18 @@ var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env == 'development';
 
+// helpers
+
 // view engine setup
 
 app.engine('handlebars', expressHandlebars({
   defaultLayout: 'main',
-  partialsDir: ['views/partials/']
+  partialsDir: ['views/partials/'],
+  helpers: {
+    timestamp: function(){
+      return new Date();
+    }
+  }
 }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');

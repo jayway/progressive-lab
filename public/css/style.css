@@ -219,3 +219,7 @@ a {
 #sign-up {
   text-align: center;
 }
+
+.timestamp {
+  font-size: 0.5em;
+}
