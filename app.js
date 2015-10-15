@@ -5,7 +5,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var busboy = require('express-busboy');
 var expressHandlebars  = require('express-handlebars');
 
 var routes = require('./lib/routes/index');
@@ -38,10 +38,7 @@ app.set('view engine', 'handlebars');
 
 // app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+busboy.extend(app);
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
